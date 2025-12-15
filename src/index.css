@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 20% 98%;
+    --foreground: 0 0% 24%;
+
+    --card: 30 20% 98%;
+    --card-foreground: 0 0% 24%;
+
+    --popover: 30 20% 98%;
+    --popover-foreground: 0 0% 24%;
+
+    --primary: 0 0% 24%;
+    --primary-foreground: 30 20% 98%;
+
+    --secondary: 30 15% 94%;
+    --secondary-foreground: 0 0% 24%;
+
+    --muted: 30 10% 90%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 350 25% 65%;
+    --accent-foreground: 30 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 0 0% 24%;
+
+    --radius: 0rem;
+
+    /* Custom Fleur tokens */
+    --header-bg: 0 0% 24%;
+    --header-foreground: 30 20% 98%;
+    --hero-overlay: 0 0% 20%;
+    --section-alt: 30 15% 96%;
+    --gold: 38 35% 55%;
+    --rose: 350 25% 65%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 12%;
+    --foreground: 30 20% 95%;
+
+    --card: 0 0% 15%;
+    --card-foreground: 30 20% 95%;
+
+    --popover: 0 0% 15%;
+    --popover-foreground: 30 20% 95%;
+
+    --primary: 30 20% 95%;
+    --primary-foreground: 0 0% 12%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 30 20% 95%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 30 10% 60%;
+
+    --accent: 350 25% 55%;
+    --accent-foreground: 30 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 30 20% 80%;
+    
+    --header-bg: 0 0% 8%;
+    --header-foreground: 30 20% 95%;
+    --hero-overlay: 0 0% 10%;
+    --section-alt: 0 0% 10%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-xs tracking-[0.2em] uppercase font-medium transition-colors duration-300 hover:text-accent;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl md:text-4xl lg:text-5xl font-normal tracking-wide;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed;
+  }
+
+  .hero-title {
+    @apply font-heading text-4xl md:text-6xl lg:text-7xl font-normal tracking-wide text-primary-foreground;
+  }
+
+  .hero-subtitle {
+    @apply font-heading text-lg md:text-xl lg:text-2xl font-light tracking-[0.3em] uppercase text-primary-foreground/80;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .image-zoom {
+    @apply overflow-hidden;
+  }
+
+  .image-zoom img {
+    @apply transition-transform duration-700 hover:scale-110;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
