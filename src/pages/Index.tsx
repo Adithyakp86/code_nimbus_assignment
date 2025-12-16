@@ -47,8 +47,16 @@ const Index = () => {
         <Clients />
         <SimpleCleanSolutions />
         
-        {/* Parallax 3 */}
-        <ParallaxSection image={parallax3} height={350} speed={0.08} />
+        {/* Separator with icon */}
+        <div className="mkd-section-title-holder"></div>
+        <div className="mkd-separator-with-icon-holder clearfix mkd-default-icon" style={{ marginTop: '7px', marginBottom: '18px' }}>
+          <span className="mkd-separat-left"></span>
+          <div className="mkd-default-icon-holder"></div>
+          <span className="mkd-separator-right"></span>
+        </div>
+        
+        {/* Parallax 1 (replaced Parallax 3) */}
+        <ParallaxSection image={parallax1} height={350} speed={0.08} />
       </main>
       <Footer />
     </div>
