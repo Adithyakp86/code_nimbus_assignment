@@ -30,7 +30,7 @@ const Index = () => {
         <Features />
         
         {/* Parallax 1 */}
-        <ParallaxSection image={parallax1} height={450} speed={0.25} />
+        <ParallaxSection image={parallax1} height={400} speed={0.1} />
         
         <BlogCarousel />
         <Testimonials />
@@ -40,7 +40,7 @@ const Index = () => {
         <Team />
         
         {/* Parallax 2 */}
-        <ParallaxSection image={parallax2} height={420} speed={0.3} />
+        <ParallaxSection image={parallax2} height={380} speed={0.12} />
         
         <Products />
         <LatestTweets />
@@ -48,7 +48,7 @@ const Index = () => {
         <SimpleCleanSolutions />
         
         {/* Parallax 3 */}
-        <ParallaxSection image={parallax3} height={380} speed={0.2} />
+        <ParallaxSection image={parallax3} height={350} speed={0.08} />
       </main>
       <Footer />
     </div>

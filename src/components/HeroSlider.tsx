@@ -77,10 +77,10 @@ export function HeroSlider() {
 
           {/* Content */}
           <div className="relative z-20 h-full flex items-center justify-center text-center px-6">
-            <div className="max-w-4xl">
+            <div className="max-w-5xl">
               <p
                 className={cn(
-                  "hero-subtitle mb-4 opacity-0",
+                  "hero-subtitle mb-6 opacity-0",
                   index === currentSlide && "animate-fade-in-up"
                 )}
                 style={{ animationDelay: "0.3s" }}
@@ -89,7 +89,7 @@ export function HeroSlider() {
               </p>
               <h1
                 className={cn(
-                  "hero-title mb-8 opacity-0",
+                  "hero-title mb-10 opacity-0",
                   index === currentSlide && "animate-fade-in-up"
                 )}
                 style={{ animationDelay: "0.6s" }}
@@ -99,7 +99,7 @@ export function HeroSlider() {
               <a
                 href="#features"
                 className={cn(
-                  "inline-block px-10 py-4 border-2 border-primary-foreground text-primary-foreground text-xs tracking-[0.2em] uppercase font-medium transition-all duration-300 hover:bg-primary-foreground hover:text-header opacity-0",
+                  "inline-block px-12 py-5 border-2 border-primary-foreground text-primary-foreground text-xs tracking-[0.3em] uppercase font-medium transition-all duration-300 hover:bg-primary-foreground hover:text-header opacity-0",
                   index === currentSlide && "animate-fade-in-up"
                 )}
                 style={{ animationDelay: "0.9s" }}

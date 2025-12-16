@@ -9,7 +9,7 @@ interface ParallaxSectionProps {
 export function ParallaxSection({ 
   image, 
   height = 420, 
-  speed = 0.3 
+  speed = 0.15 
 }: ParallaxSectionProps) {
   const [offset, setOffset] = useState(0);
 
@@ -27,7 +27,7 @@ export function ParallaxSection({
       style={{
         height: `${height}px`,
         backgroundImage: `url(${image})`,
-        backgroundPosition: `50% ${-offset}px`,
+        backgroundPosition: `50% ${-offset * 0.5}px`,
       }}
     />
   );

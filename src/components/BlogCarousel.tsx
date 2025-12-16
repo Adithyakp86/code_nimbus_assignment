@@ -51,7 +51,7 @@ export function BlogCarousel() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % TOTAL);
-    }, 6000);
+    }, 5000); // Slightly faster for continuous feel
     return () => clearInterval(timer);
   }, []);
 
@@ -90,13 +90,13 @@ export function BlogCarousel() {
           </button>
 
           {/* Viewport */}
-          <div className="overflow-hidden px-12">
+          <div className="overflow-hidden px-16">
 
             {/* Track */}
             <motion.div
-              className="flex gap-8"
+              className="flex gap-6"
               animate={{ x: `-${index * (100 / SLIDES_VISIBLE)}%` }}
-              transition={{ duration: 0.7, ease: "easeInOut" }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
               style={{ width: "200%" }} // duplicated slides
             >
               {slides.map((post, i) => (
@@ -108,16 +108,16 @@ export function BlogCarousel() {
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     />
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl mb-3">{post.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4">
+                  <div className="p-5">
+                    <h3 className="font-heading text-xl mb-2">{post.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
                       {post.excerpt}
                     </p>
-                    <div className="text-xs text-muted-foreground">
+                    <div className="text-xs text-muted-foreground tracking-wide">
                       {post.category} · {post.date}
                     </div>
                   </div>
