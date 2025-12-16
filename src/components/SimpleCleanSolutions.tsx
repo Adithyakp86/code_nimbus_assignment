@@ -37,7 +37,7 @@ export const SimpleCleanSolutions = () => {
   }, []);
 
   return (
-    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-background relative overflow-hidden pb-0">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -95,7 +95,7 @@ export const SimpleCleanSolutions = () => {
         </div>
 
         {/* Tagline */}
-        <p className="text-center font-heading text-xl lg:text-2xl italic text-muted-foreground">
+        <p className="text-center font-heading text-xl lg:text-2xl italic text-muted-foreground mb-0">
           Less is definitely more.
         </p>
       </div>

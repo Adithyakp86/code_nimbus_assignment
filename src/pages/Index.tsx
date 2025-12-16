@@ -46,6 +46,7 @@ const Index = () => {
         <LatestTweets />
         <Clients />
         <SimpleCleanSolutions />
+        <Footer />
         
         {/* Separator with icon */}
         <div className="mkd-section-title-holder"></div>
